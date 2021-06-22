@@ -1,1 +1,65 @@
-//header
+.header {
+   padding: 65px 0 35px;
+}
+
+.header__wrapper {
+   display: flex;
+   align-items: center;
+
+   @include media(max,$xl) {
+      flex-direction: column;
+
+      @include media(max,$lg) {
+         flex-direction: row;
+         justify-content: space-between;
+      }
+   }
+}
+
+.header__logo {
+   margin: 0 114px 0 0;
+
+   @include media(max,$xl) {
+      margin: 0;
+   }
+}
+
+.header__menu {
+   margin: 0 138px 0 0;
+
+   @include media(max,$xl) {
+      margin: 50px 0;
+
+      @include media(max,$lg) {
+         display: none;
+      }
+   }
+}
+
+.header__list {
+   display: flex;
+   align-items: center;
+}
+
+.header__item:not( :last-of-type ) {
+   margin: 0 40px 0 0;
+}
+
+.header__link {
+   @include font(23px,1.2,false);
+   color: $base-color;
+}
+
+.header__socials {
+   display: flex;
+   align-items: center;
+}
+
+.header__social-item:not( :last-of-type ){
+   margin: 0 28px 0 0;
+}
+
+.header__icon {
+   @include wh(40px);
+   fill: $secondary-color-1;
+}

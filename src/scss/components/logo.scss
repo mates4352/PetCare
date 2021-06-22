@@ -1,0 +1,15 @@
+.logo {
+   display: flex;
+   align-items: center;
+}
+
+.logo__icon {
+   @include wh(64px);
+   margin: 0 20px 0 0;
+   fill: $secondary-color-1;
+}
+
+.logo__title {
+   @include font(28px,1,600);
+   color: $base-color;
+}
