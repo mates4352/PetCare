@@ -6,7 +6,13 @@
 .logo__icon {
    @include wh(64px);
    margin: 0 20px 0 0;
+   transition: fill 500ms ease;
    fill: $secondary-color-1;
+}
+
+.logo:focus .logo__icon,
+.logo:hover .logo__icon {
+   fill: $base-color;
 }
 
 .logo__title {

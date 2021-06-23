@@ -33,6 +33,10 @@
    align-items: center;
 }
 
+.header__item {
+   position: relative;
+}
+
 .header__item:not( :last-of-type ) {
    margin: 0 40px 0 0;
 }
@@ -40,18 +44,34 @@
 .header__link {
    @include font(23px,1.2,false);
    color: $base-color;
+   transition: color 500ms ease;
+}
+
+.header__link:focus,
+.header__link:hover {
+   color: $secondary-color-1;
 }
 
 .header__socials {
    display: flex;
    align-items: center;
+
+   @include media(max,$sm) {
+      display: none;
+   }
 }
 
-.header__social-item:not( :last-of-type ){
+.header__social-item:not( :last-of-type ) {
    margin: 0 28px 0 0;
 }
 
 .header__icon {
    @include wh(40px);
+   transition: fill 500ms ease;
    fill: $secondary-color-1;
+}
+
+.header__icon:focus,
+.header__icon:hover {
+   fill: $secondary-color-2;
 }

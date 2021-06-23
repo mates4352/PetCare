@@ -16,3 +16,19 @@
    visibility: visible;
    opacity: 1;
 }
+
+.menu .header__list {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+}
+
+.menu .header__item:not( :last-of-type ) {
+   margin: 0 0 25px 0;
+}
+
+.menu .header__link {
+   color: $secondary-color-3;
+}
