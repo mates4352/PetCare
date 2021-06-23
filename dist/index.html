@@ -94,26 +94,50 @@
 
    <section class="home">
    <div class="container">
-      <div class="home__wrapper">
 
-         <div class="home__caption">
+      <div class="swiper-container">
+         <div class="swiper-wrapper">
+            <div class="home__wrapper">
 
-            <h2 class="home__title">Мы заботимся <span> о ваших питомцах </span></h2>
+               <div class="home__caption">
 
-            <p class="home__text">
-               Записывайтесь в ветклиники <span> и консультируйтесь
-               с ветеринарным </span> врачом онлайн
-            </p>
+                  <h2 class="home__title">Мы заботимся <span> о ваших питомцах </span></h2>
 
-            <button class="home__btn">Связаться с нами</button>
+                  <p class="home__text">
+                     Записывайтесь в ветклиники <span> и консультируйтесь
+                     с ветеринарным </span> врачом онлайн
+                  </p>
+
+                  <button class="home__btn">Связаться с нами</button>
+               </div>
+
+               <picture class="home__wrap-img">
+                  <!-- <source type="image/webp" srcset="./assets/images/cat.webp, ./assets/images/cat@2x.webp " /> -->
+                  <img class="home__img" alt="cat" src="./assets/images/cat.png" srcset="./assets/images/cat@2x.png 2x" />
+               </picture>
+
+            </div>
+
          </div>
 
-         <picture class="home__wrap-img">
-            <!-- <source type="image/webp" srcset="./assets/images/cat.webp, ./assets/images/cat@2x.webp " /> -->
-            <img class="home__img" alt="cat" src="./assets/images/cat.png" srcset="./assets/images/cat@2x.png 2x" />
-         </picture>
+         <div class="swiper-pagination"></div>
 
-      </div>
+         <div class="swiper-button-prev">
+            <svg class="swiper-button-next-svg">
+               <use xlink:href="./assets/icons/symbol/mutable.svg#arrow"></use>
+            </svg>
+         </div>
+
+         <div class="swiper-button-next">
+            <svg class="swiper-button-next-svg">
+               <use xlink:href="./assets/icons/symbol/mutable.svg#arrow"></use>
+            </svg>
+         </div>
+
+         <div class="swiper-scrollbar"></div>
+
+       </div>
+
 
    </div>
 
