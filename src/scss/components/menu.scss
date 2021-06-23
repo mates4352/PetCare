@@ -11,6 +11,43 @@
    transition: transform 500ms ease, visibility 500ms ease, opacity 500ms ease;
 }
 
+.menu__close {
+   @include wh(24px);
+   position: absolute;
+   top: 30px;
+   right: 32px;
+   background-color: transparent;
+   border: none;
+}
+
+.menu__close::after,
+.menu__close::before {
+   position: absolute;
+   top: 50%;
+   left: 0;
+
+   @include wh(100%,2px);
+   background-color: $secondary-color-3;
+   transition: transform 300ms linear;
+   content: '';
+}
+
+.menu__close::after {
+   transform: rotate(45deg);
+}
+
+.menu__close::before {
+   transform: rotate(-45deg);
+}
+
+.menu__close.active::after {
+   transform: rotate(45deg);
+}
+
+.menu__close.active::before {
+   transform: rotate(-45deg);
+}
+
 .menu.active {
    transform: translateX(0);
    visibility: visible;
