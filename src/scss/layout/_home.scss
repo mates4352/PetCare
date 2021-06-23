@@ -1,0 +1,52 @@
+.home {
+   padding-top: 105px;
+   background-color: #000;
+}
+
+.home__wrapper {
+   display: flex;
+}
+
+.home__caption {
+   margin: 0 140px 0 0;
+}
+
+.home__title {
+   @include font(50px,1.2,600);
+   max-width: 500px;
+   margin: 0 0 24px;
+   color: $secondary-color-3;
+}
+
+.home__title span {
+   display: block;
+}
+
+.home__text {
+   @include font(30px,1.2,false);
+   max-width: 590px;
+   margin: 0 0 32px;
+   color: $secondary-color-4;
+}
+
+.home__text span {
+   display: block;
+}
+
+.home__btn {
+   @include font(22px,1.2,false);
+   display: inline-block;
+   min-width: 150px;
+   height: 60px;
+   padding: 0 50.5px;
+   color: #fff;
+   background: linear-gradient(90deg, $secondary-color-4 0%, $secondary-color-1 100%);
+   border: none;
+   border-radius: 40px;
+}
+
+// .home__wrap-img {
+// }
+
+// .home__img {
+// }
