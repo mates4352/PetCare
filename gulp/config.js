@@ -38,8 +38,8 @@ const config = {
    },
 
    concat: [
-      `${srcPath}/js/main.js`,
-      // `${srcPath}/js/components/.js`,
+      // `${srcPath}/js/main.js`,
+      `${srcPath}/js/components/burger.js`,
       // `${srcPath}/js/library/.js`,
    ],
 
