@@ -1,17 +1,35 @@
 @import 'swiper-bundle';
 
-.swiper-container{
-   border: 10px solid rgb(211, 178, 178);
-}
+.swiper-container {
+   width: 1200px;
+   height: 300px;
+ }
 
 .swiper-button-prev,
 .swiper-button-next {
    transition: transform 500ms ease;
+   top: 51px;
+
+   @include media(max,$md) {
+      display: none;
+   }
 }
 
-.swiper-button-prev:hover,
+.swiper-button-prev {
+   left: 0;
+}
+
+.swiper-button-next {
+   right: -87.5%;
+}
+
+
 .swiper-button-next:hover {
-   transform: scale(1.1);
+   transform: translateX(-10px) scale(1.1);
+}
+
+.swiper-button-prev:hover {
+   transform: translateX(10px) scale(1.1);
 }
 
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next,
@@ -38,4 +56,23 @@
 
 .swiper-button-prev .swiper-button-next-svg {
    transform: rotate(180deg);
+}
+
+.swiper-pagination {
+   display: none;
+
+   @include media(max,$md) {
+      display: block;
+   }
+}
+
+.swiper-pagination-bullet {
+   @include wh(16px);
+   background-color:$secondary-color-3;
+
+
+}
+
+ .swiper-pagination-bullet-active {
+   background-color: $secondary-color-2;
 }

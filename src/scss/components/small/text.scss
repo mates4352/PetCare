@@ -1,0 +1,7 @@
+.text {
+   @include font(30px,1.2,false);
+
+   @include media(max,$sm) {
+      font-size: 14px;
+   }
+}

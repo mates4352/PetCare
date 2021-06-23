@@ -1,0 +1,16 @@
+.btn {
+   @include font(22px,1.2,false);
+   display: inline-block;
+   width: 100%;
+   max-width: 300px;
+   height: 60px;
+   color: #fff;
+   border: none;
+   border-radius: 40px;
+
+   @include media(max,$sm) {
+      max-width: 160px;
+      height: 40px;
+      font-size: 14px;
+   }
+}

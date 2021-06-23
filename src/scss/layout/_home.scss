@@ -1,56 +1,162 @@
 .home {
-   padding: 105px 0 71px 0;
-   background-color: #000;
+   @include media(max,$sm) {
+      padding: 0 20px;
+   }
+}
+
+.home__bg {
+   position: relative;
+   background-color: $secondary-color-2;
+   clip-path: circle(2369px at 50% -296%);
+
+   @include media(max,$md) {
+      clip-path: none;
+
+      @include media(max,$sm) {
+         overflow: hidden;
+         border-radius: 24px;
+      }
+   }
+}
+
+.home__dog-bg {
+   position: relative;
+   background: url('./../../assets/images/dog.jpg') no-repeat center center /cover;
+
+   @include media(max,$sm) {
+      background: url('./../../assets/images/dogSm.jpg') no-repeat center center /cover;
+      border-radius: 24px;
+   }
+
 }
 
 .home__wrapper {
+   position: relative;
    display: flex;
+   padding: 105px 0 149px;
+
+   @include media(max,$sm) {
+      min-height: 400px;
+      padding: 32px 0 0;
+   }
+}
+
+.home__dog-wrapper {
+   padding: 136px 0 110px;
+
+   @include media(max,$sm) {
+      padding: 32px 0 0;
+   }
 }
 
 .home__caption {
-   margin: 0 140px 0 0;
+   @include media(max,$lg) {
+      z-index: 1;
+   }
+}
+
+.home__dog-caption {
+   @include media(max,$md) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 32px;
+   }
 }
 
 .home__title {
-   @include font(50px,1.2,600);
    max-width: 500px;
-   margin: 0 0 24px;
    color: $secondary-color-3;
 }
 
-.home__title span {
-   display: block;
+.home__dog-title {
+   color: $secondary-color-2;
 }
 
 .home__text {
-   @include font(30px,1.2,false);
    max-width: 590px;
    margin: 0 0 32px;
    color: $secondary-color-4;
+
+   @include media(max,$sm) {
+      margin: 0 0 24px;
+   }
 }
 
 .home__text span {
    display: block;
 }
 
-.home__btn {
-   @include font(22px,1.2,false);
-   display: inline-block;
-   min-width: 150px;
-   height: 60px;
-   padding: 0 50.5px;
-   color: #fff;
-   background: linear-gradient(90deg, $secondary-color-4 0%, $secondary-color-1 100%);
-   border: none;
-   border-radius: 40px;
+.home__dog-text {
+   max-width: 550px;
+   margin: 0 0 24px;
+   color: $secondary-color-2;
 }
 
-// .home__wrap-img {
-// }
+.home__price {
+   @include font(36px,1.2,600);
+   display: block;
+   margin: 0 0 24px;
+   color: $secondary-color-2;
 
-// .home__img {
-// }
+   @include media(max,$md) {
+      flex-grow: 1;
 
+      @include media(max,$sm) {
+         font-size: 22px;
+      }
+   }
+}
+
+.home__title span {
+   display: block;
+}
+
+.home__btn {
+   background: linear-gradient(90deg, $secondary-color-4 0%, $secondary-color-1 100%);
+}
+
+.home__dog-btn {
+   background-color: $secondary-color-2;
+}
+
+.home__btn {
+   background: linear-gradient(90deg, $secondary-color-4 0%, $secondary-color-1 100%);
+}
+
+.home__wrap-img {
+   position: absolute;
+   top: 10%;
+   left: 60%;
+
+   @include media(max,$lg) {
+      position: absolute;
+      top: 21%;
+      left: 59%;
+
+      @include media(max,$sm) {
+         position: absolute;
+         top: auto;
+         right: -50px;
+         bottom: 0;
+         left: auto;
+      }
+   }
+}
+
+.home__img {
+   @include media(max,$lg) {
+      width: 350px;
+
+      @include media(max,$sm) {
+         width: 200px;
+         min-width: 150px;
+
+         @include media(max,$xs) {
+            width: 150px;
+         }
+      }
+   }
+}
 
 .swiper-container {
    width: 100%;
