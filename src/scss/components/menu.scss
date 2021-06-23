@@ -28,24 +28,24 @@
 
    @include wh(100%,2px);
    background-color: $secondary-color-3;
-   transition: transform 300ms linear;
+   transition: transform 700ms linear;
    content: '';
 }
 
 .menu__close::after {
-   transform: rotate(45deg);
-}
-
-.menu__close::before {
-   transform: rotate(-45deg);
-}
-
-.menu__close.active::after {
    transform: rotate(45deg) scale(0);
 }
 
-.menu__close.active::before {
+.menu__close::before {
    transform: rotate(-45deg) scale(0);
+}
+
+.menu__close.active::after {
+   transform: rotate(45deg) scale(1);
+}
+
+.menu__close.active::before {
+   transform: rotate(-45deg) scale(1);
 }
 
 .menu.active {
