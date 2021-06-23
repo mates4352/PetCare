@@ -26,12 +26,13 @@ const burgerMenu = () => {
    })
 
    burger.addEventListener('click', () => {
+      close.classList.add('active')
       burger.classList.add('active')
       menu.classList.add('active')
    })
 
    close.addEventListener('click', () => {
-      close.classList.remove('acitve')
+      close.classList.remove('active')
       menu.classList.remove('active')
       burger.classList.remove('active')
    })
