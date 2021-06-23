@@ -41,11 +41,11 @@
 }
 
 .menu__close.active::after {
-   transform: rotate(45deg);
+   transform: rotate(45deg) scale(0);
 }
 
 .menu__close.active::before {
-   transform: rotate(-45deg);
+   transform: rotate(-45deg) scale(0);
 }
 
 .menu.active {
