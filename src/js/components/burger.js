@@ -3,7 +3,7 @@ const burgerMenu = () => {
    const menu = document.querySelector('.menu')
    const headerNav = document.querySelector('.header__menu')
    const headerUl = document.querySelector('.header__list')
-
+   const close = document.querySelector('.menu__close')
 
    function adaptivMenu(windowWidth, breakpoint) {
       if (windowWidth < breakpoint) {
@@ -26,8 +26,14 @@ const burgerMenu = () => {
    })
 
    burger.addEventListener('click', () => {
-      burger.classList.toggle('active')
-      menu.classList.toggle('active')
+      burger.classList.add('active')
+      menu.classList.add('active')
+   })
+
+   close.addEventListener('click', () => {
+      close.classList.remove('acitve')
+      menu.classList.remove('active')
+      burger.classList.remove('active')
    })
 
 }
