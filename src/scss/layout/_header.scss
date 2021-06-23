@@ -7,12 +7,7 @@
    align-items: center;
 
    @include media(max,$xl) {
-      flex-direction: column;
-
-      @include media(max,$lg) {
-         flex-direction: row;
-         justify-content: space-between;
-      }
+      justify-content: space-between;
    }
 }
 
@@ -28,11 +23,8 @@
    margin: 0 138px 0 0;
 
    @include media(max,$xl) {
-      margin: 50px 0;
-
-      @include media(max,$lg) {
-         display: none;
-      }
+      display: none;
+      margin: 0;
    }
 }
 

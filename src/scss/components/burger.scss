@@ -1,0 +1,53 @@
+.burger {
+   position: relative;
+   z-index: 9999;
+   display: none;
+
+   @include wh(32px,22px);
+   background-color: transparent;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+
+   @include media(max,$xl) {
+      display: block;
+   }
+}
+
+.burger span,
+.burger::after,
+.burger::before {
+   position: absolute;
+   top: 50%;
+   left: 0;
+
+   @include wh(100%,2px);
+   background-color: $secondary-color-1;
+   transform: translateY(-50%);
+   transition: transform 300ms linear, top 300ms linear;
+   content: '';
+}
+
+.burger.active span {
+   transform: translate(-50%, -50%) scale(0);
+}
+
+.burger::before {
+   top: 0;
+   width: 70%;
+}
+
+.burger.active::before {
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.burger::after {
+   top: 100%;
+   width: 80%;
+}
+
+.burger.active::after {
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(-45deg);
+}

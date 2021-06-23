@@ -2,7 +2,7 @@
    max-width: 1216px;
    margin: 0 auto;
 
-   @include media(max,$lg) {
+   @include media(max,$xl) {
       padding: 0 15px;
    }
 }
