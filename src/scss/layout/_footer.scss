@@ -1,13 +1,36 @@
 .footer {
+   padding: 120px 0 45px;
+
+   @include media(max,$lg) {
+      padding: 75px 0 50px;
+   }
 }
 
 .footer__wrapper {
    display: flex;
    align-items: center;
+
+   @include media(max,$lg) {
+      justify-content: space-between;
+
+      @include media(max,$md) {
+         flex-direction: column;
+         justify-content: center;
+      }
+   }
 }
 
 .footer__address {
    margin: 0 194px 0 0;
+
+   @include media(max,$lg) {
+      margin: 0 50px 0 0;
+
+      @include media(max,$md) {
+         order: 1;
+         margin: 0 0 29px;
+      }
+   }
 }
 
 .footer__contact {
@@ -21,10 +44,28 @@
 }
 
 .footer__copyright {
-   @include font(20px,1.2,400);
+   @include font(20px,1.2,400,center);
    margin: 0 217px 0 0;
    color: $secondary-color-2;
+
+   @include media(max,$lg) {
+      margin: 0 50px 0 0;
+
+      @include media(max,$md) {
+         order: 3;
+         margin: 0;
+      }
+   }
+}
+
+.footer__copyright span {
+   @include media(max,$md) {
+      display: block;
+   }
 }
 
 .footer__logo {
+   @include media(max,$md) {
+      margin: 0 0 35px;
+   }
 }

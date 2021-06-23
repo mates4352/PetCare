@@ -1,11 +1,14 @@
-.advice {
-   padding: 0 0 120px;
-   background-color: #000;
-}
+// .advice {
+// }
 
 .advice__wrapper {
    display: flex;
    margin: 0 -16px;
+
+   @include media(max,$lg) {
+      flex-direction: column;
+      align-items: center;
+   }
 }
 
 .advice__card {
@@ -18,6 +21,11 @@
    padding: 0 40px;
    background: red;
    border-radius: 40px;
+
+   @include media(max,$lg) {
+      width: 100%;
+      margin: 0 0 32px;
+   }
 }
 
 .advice__title {
@@ -28,7 +36,12 @@
 }
 
 .advice__card:nth-of-type( 2 ) {
-   background: $base-color url('./../../assets/images/painful.jpg') no-repeat 100% 0%/100% 88.5%;
+   position: relative;
+   background: url('./../../assets/images/painful.jpg') no-repeat center center /cover;
+
+   @include media(max,$lg) {
+      margin: 0;
+   }
 }
 
 .advice__card:nth-of-type( 2 ) .advice__title {
@@ -38,12 +51,19 @@
 
 .advice__text {
    @include font(24px,1.2,400);
-   margin: 0 0 50px;
+   margin: 0 0 101px;
    color: #fff;
 }
 
 .advice__link {
    @include font(24px,1.2,600);
-   padding: 0 0 22px;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   padding: 23px 40px 22px;
    color: #fff;
+   background-color: $base-color;
+   border-bottom-right-radius: 40px;
+   border-bottom-left-radius: 40px;
 }
