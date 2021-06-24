@@ -1,5 +1,39 @@
 <section class="home">
 
+   <div class="popup">
+      <div class="popup__body">
+         <button class="popup__close"></button>
+         <h3 class="popup__title">
+            Чтобы подобрать план,<br>
+            необходимо заполнить форму ниже
+         </h3>
+
+         <form class="popup__form" action="#" >
+            <h5 class="popup__text">У меня:</h5>
+
+            <div class="popup__wrap-animal">
+               <input class="popup__option-animal" id="cat" type="radio" name="animal">
+               <label class="popup__label" for="cat">Кошка</label>
+
+               <input class="popup__option-animal" id="dog" type="radio" name="animal">
+               <label class="popup__label" for="dog">Собака</label>
+            </div>
+
+            <div class="popup__wrap">
+               <input class="popup__input-fill" type="text" placeholder="Имя питомца" required>
+               <input class="popup__input-fill" type="text" placeholder="Порода питомца*" required>
+               <input class="popup__input-fill" type="text" placeholder="Возраст питомца*" required>
+               <input class="popup__input-fill" type="tel" placeholder="Ваш номер телефона" required>
+               <input class="popup__input-fill" type="email" placeholder="Ваш email*" required>
+            </div>
+
+            <button class="popup__btn btn" type="submit">Отправить</button>
+
+         </form>
+      </div>
+
+   </div>
+
    <div class="swiper-container">
       <div class="swiper-wrapper">
          <div class="swiper-slide">
@@ -33,6 +67,7 @@
          </div>
 
          <div class="swiper-slide">
+
             <div class="home__dog-bg">
                <div class="container">
 
