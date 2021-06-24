@@ -1,6 +1,7 @@
 .title {
    @include font(50px,1.2,600);
-   margin: 0 0 24px;
+   margin: 0 0 32px;
+
    @include media(max,$sm) {
       font-size: 24px;
 

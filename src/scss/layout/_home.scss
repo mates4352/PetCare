@@ -7,14 +7,17 @@
 .home__bg {
    position: relative;
    background-color: $secondary-color-2;
-   clip-path: circle(2369px at 50% -296%);
+   clip-path: circle(2369px at 50% -291.5%);
 
    @include media(max,$md) {
       clip-path: none;
 
       @include media(max,$sm) {
+         height: 1px;
+         min-height: 400px;
+         margin: 0 0 30px 0;
          overflow: hidden;
-         border-radius: 24px;
+         border-radius: $border-card-sm;
       }
    }
 }
@@ -24,8 +27,11 @@
    background: url('./../../assets/images/dog.jpg') no-repeat center center /cover;
 
    @include media(max,$sm) {
+      height: 1px;
+      min-height: 400px;
+      margin: 0 0 30px 0;
       background: url('./../../assets/images/dogSm.jpg') no-repeat center center /cover;
-      border-radius: 24px;
+      border-radius: $border-card-sm;
    }
 
 }
@@ -33,10 +39,10 @@
 .home__wrapper {
    position: relative;
    display: flex;
+   height: inherit;
    padding: 105px 0 149px;
 
    @include media(max,$sm) {
-      min-height: 400px;
       padding: 32px 0 0;
    }
 }
@@ -130,7 +136,8 @@
 
    @include media(max,$lg) {
       position: absolute;
-      top: 21%;
+      top: auto;
+      bottom: 0;
       left: 59%;
 
       @include media(max,$sm) {
