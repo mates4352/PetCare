@@ -22,8 +22,10 @@
    min-height: 630px;
    margin: 0 16px;
    padding: 0 $card-padding;
+   overflow: hidden;
    background: url('./../../assets/images/consultation.jpg') no-repeat center center /cover;
    border-radius: $border-card;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
    @include media(max,$lg) {
       width: $card-weight-lg;
@@ -64,11 +66,29 @@
    }
 }
 
-.advice__arrow {
+.advice__arrow-btn {
    @include wh(230px,16px);
    z-index: 1;
    margin: 0 0 90px;
+   background-color: transparent;
+   border: none;
+   transition: transform 500ms ease;
+}
+
+.advice__arrow-btn:focus,
+.advice__arrow-btn:hover {
+   transform: translateX(50px);
+}
+
+.advice__arrow {
+   @include wh(230px,16px);
+   transition: fill 500ms ease;
    fill: #fff;
+}
+
+.advice__arrow-btn:focus .advice__arrow,
+.advice__arrow-btn:hover .advice__arrow {
+   fill: $secondary-color-4;
 }
 
 .advice__card:nth-of-type( 2 ) {
@@ -119,4 +139,103 @@
       border-bottom-right-radius: $border-card-small;
       border-bottom-left-radius: $border-card-small;
    }
+}
+
+.advice__card-bg {
+   @include wh(100%);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 500;
+   padding: 48px $card-padding;
+   background-color: #fff;
+   border-radius: $border-card;
+   transform: translateX(101%);
+   transition: transform 500ms ease;
+
+   @include media(max,$sm) {
+      padding: 32px $card-padding-sm 40px $card-padding-sm;
+      border-radius: $border-card-small;
+   }
+}
+
+.advice__card-bg.active {
+   transform: translateX(0);
+}
+
+.advice__title-hidden {
+   @include font(32px,1.2,600);
+   max-width: 384px;
+   margin: 0 0 24px;
+   color: $secondary-color-2;
+
+   @include media(max,$sm) {
+      margin: 0 0 8px;
+      font-size: 20px;
+   }
+}
+
+.advice__price-hidden {
+   @include font(39px,1.2,600);
+   display: block;
+   margin: 0 0 39px;
+   color: $secondary-color-4;
+
+   @include media(max,$sm) {
+      margin: 0 0 16px;
+      font-size: 26px;
+   }
+}
+
+.advice__price-hidden span {
+   font-size: 32px;
+}
+
+.advice__list {
+   margin: 0 0 57px;
+}
+
+.advice__item {
+   @include font(22px,1.2,400);
+   position: relative;
+   margin: 0 0 55px;
+   padding: 0 0 0 77px;
+   color: $base-color;
+
+   @include media(max,$sm) {
+      font-size: 14px;
+   }
+}
+
+.advice__item:nth-of-type( 2 ) {
+   margin: 0 0 40px;
+}
+
+.advice__item::before {
+   @include wh(56px);
+   position: absolute;
+   top: 50%;
+   left: 0;
+   background: url('./../../assets/images/icon.svg') no-repeat center center/cover;
+   transform: translateY(-50%);
+   content: '';
+
+   @include media(max,$sm) {
+      @include wh(32px);
+   }
+}
+
+.advice__btn {
+   max-width: 344px;
+   transition: background-color  500ms ease;
+
+   @include media(max,$sm) {
+      max-width: 220px;
+      font-size: 14px;
+   }
+}
+
+.advice__btn:focus,
+.advice__btn:hover {
+   background-color: $secondary-color-1;
 }
