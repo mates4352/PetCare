@@ -37,8 +37,13 @@
 
 .popup__close {
    @include wh(30px);
-   top: 10px;
-   right: 10px;
+   top: 30px;
+   right: 30px;
+
+   @include media(max,$sm) {
+      top: 10px;
+      right: 10px;
+   }
 }
 
 .popup__close.active::after,

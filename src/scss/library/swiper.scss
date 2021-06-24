@@ -31,14 +31,14 @@
 
 .swiper-button-prev {
    left: 0;
-   @include media(max,$xl) {
+   @include media(max,1250px) {
       margin: 0 0 0 20px;
    }
 }
 
 .swiper-button-next {
    right: 0;
-   @include media(max,$xl) {
+   @include media(max,1250px) {
       margin: 0 20px 0 0;
    }
 }

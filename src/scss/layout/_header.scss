@@ -18,13 +18,21 @@
 .header__logo {
    margin: 0 114px 0 0;
 
-   @include media(max,$xl) {
-      margin: 0;
+   @include media(max,1235px) {
+      margin: 0 100px 0 0;
+
+      @include media(max,$xl) {
+         margin: 0;
+      }
    }
 }
 
 .header__menu {
    margin: 0 138px 0 0;
+
+   @include media(max,1250px) {
+      margin: 0 100px 0 0;
+   }
 
    @include media(max,$xl) {
       display: none;

@@ -42,6 +42,7 @@
    @include font(24px,1.2,false);
    display: block;
    color: $secondary-color-1;
+
 }
 
 .footer__contact:nth-of-type( 1 ){
@@ -50,6 +51,10 @@
    @include media(max,$sm) {
       margin: 0 0 5px;
    }
+}
+
+a.footer__contact:hover {
+   text-decoration: underline;
 }
 
 .footer__copyright {
