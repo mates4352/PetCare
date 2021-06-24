@@ -1,5 +1,5 @@
 .footer {
-   padding: 120px 0 45px;
+   padding: 1010px 0 45px;
 
    @include media(max,$lg) {
       padding: 75px 0 50px;
@@ -42,10 +42,9 @@
    @include font(24px,1.2,false);
    display: block;
    color: $secondary-color-1;
-
 }
 
-.footer__contact:nth-of-type( 1 ){
+.footer__contact:nth-of-type( 1 ) {
    margin: 0 0 10px;
 
    @include media(max,$sm) {

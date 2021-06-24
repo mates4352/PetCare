@@ -7,7 +7,7 @@ const purgecss = () => (
          {
             content: [
                'src/**/*.html',
-               'src/**/*.js',
+               'src/js/**/*.js',
             ]
          }
       ))
