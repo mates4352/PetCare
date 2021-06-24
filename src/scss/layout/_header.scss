@@ -1,5 +1,9 @@
 .header {
    padding: 49px 0 31px;
+
+   @include media(max,$sm) {
+      padding: 33px 0 32px;
+   }
 }
 
 .header__wrapper {
@@ -35,6 +39,7 @@
 
 .header__item {
    position: relative;
+   overflow: hidden;
 }
 
 .header__item:not( :last-of-type ) {
@@ -43,8 +48,41 @@
 
 .header__link {
    @include font(23px,1.2,false);
+   position: relative;
    color: $base-color;
    transition: color 500ms ease;
+}
+
+.header__link::after,
+.header__link::before {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: $secondary-color-2;
+   transition: transform 500ms ease;
+   content: '';
+
+   @include media(max,$xl) {
+      background-color: $secondary-color-3;
+   }
+}
+
+.header__link::after {
+   transform: translateX(101%);
+}
+
+.header__link::before {
+   transform: translateX(-101%);
+}
+
+.header__link:hover::before {
+   transform: translateX(-40%);
+}
+
+.header__link:hover::after {
+   transform: translateX(40%);
 }
 
 .header__link:focus,

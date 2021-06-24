@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/style.min.css">
    <title>title</title>
 </head>
 
@@ -46,7 +46,7 @@
    <header class="header">
 
    <nav class="menu">
-      <button class="close" aria-label="Кнопка закрыть меню"></button>
+      <button class="menu__close close" aria-label="Кнопка закрыть меню"></button>
    </nav>
 
    <div class="container">
@@ -56,9 +56,9 @@
             <span></span>
          </button>
 
-         <a class="header__logo logo" href="#">
+         <a class="header__logo logo" href="index.min.html">
 
-            <svg class="logo__icon">
+            <svg class="logo__icon" aria-label="logo">
                <use xlink:href="./assets/icons/symbol/mutable.svg#logo"></use>
             </svg>
 
@@ -95,7 +95,7 @@
          <ul class="header__socials">
 
             <li class="header__social-item">
-               <a class="header__social-link" href="#">
+               <a class="header__social-link" href="#" aria-label="instagram">
                   <svg class="header__icon">
                      <use xlink:href="./assets/icons/symbol/mutable.svg#insta"></use>
                   </svg>
@@ -103,7 +103,7 @@
             </li>
 
             <li class="header__social-item">
-               <a class="header__social-link" href="#">
+               <a class="header__social-link" href="#" aria-label="telegram">
                   <svg class="header__icon">
                      <use xlink:href="./assets/icons/symbol/mutable.svg#telegram"></use>
                   </svg>
@@ -111,7 +111,7 @@
             </li>
 
             <li class="header__social-item">
-               <a class="header__social-link" href="#">
+               <a class="header__social-link" href="#" aria-label="vk">
                   <svg class="header__icon">
                      <use xlink:href="./assets/icons/symbol/mutable.svg#vk"></use>
                   </svg>
@@ -145,13 +145,14 @@
                               с ветеринарным </span> врачом онлайн
                         </p>
 
-                        <button class="home__btn btn">Связаться с нами</button>
+                        <a class="home__btn btn" href="#footer">Связаться с нами</a>
                      </div>
 
                      <picture class="home__wrap-img">
-                        <!-- <source type="image/webp" srcset="./assets/images/cat.webp, ./assets/images/cat@2x.webp " /> -->
-                        <img class="home__img" alt="cat" src="./assets/images/cat.png"
-                           srcset="./assets/images/cat@2x.png 2x" />
+                        <source  type="image/webp" media="(max-width: 576px)" srcset="./assets/images/cat-sm.webp, ./assets/images/cat-sm@2x.webp 2x">
+                        <source  type="image/webp" media="(max-width: 1400px)"srcset="./assets/images/cat.webp, ./assets/images/cat@2x.webp 2x">
+
+                        <img class="home__img" alt="cat" src="./assets/images/cat.png" srcset="./assets/images/cat@2x.png 2x" />
                      </picture>
 
                   </div>
@@ -219,13 +220,11 @@
                с терапевтом?
             </h3>
 
-            <button class="advice__arrow-btn">
-               <svg class="advice__arrow">
-                  <use xlink:href="./assets/icons/symbol/mutable.svg#arrowLine"></use>
-               </svg>
-            </button>
+            <svg class="advice__arrow">
+               <use xlink:href="./assets/icons/symbol/mutable.svg#arrowLine"></use>
+            </svg>
 
-            <div class="advice__card-bg" aria-hidden="true">
+            <div class="advice__card-bg">
                <h3 class="advice__title-hidden">
                   Онлайн-консультация
                   с терапевтом
@@ -262,20 +261,20 @@
 </section>
 
 
-   <footer class="footer">
+   <footer class="footer" id="footer">
    <div class="container">
       <div class="footer__wrapper">
 
          <address class="footer__address">
 
-            <em class="footer__contact">8 (800) 999-88-77</em>
-            <em class="footer__contact">info@petcare.com</em>
+            <span class="footer__contact">8 (800) 999-88-77</span>
+            <a class="footer__contact" href="#">info@petcare.com</a>
 
          </address>
 
          <small class="footer__copyright">©2021 PetCare. <span> Все права защищены </span></small>
 
-         <a class="footer__logo logo" href="#">
+         <a class="footer__logo logo" href="index.min.html">
 
             <svg class="logo__icon">
                <use xlink:href="./assets/icons/symbol/mutable.svg#logo"></use>
@@ -290,7 +289,7 @@
 </footer>
 
 
-   <script src="./js/main.js"></script>
+   <script src="./js/main.min.js"></script>
 
 
 </body>

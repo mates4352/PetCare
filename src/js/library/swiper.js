@@ -16,4 +16,11 @@ const swiper = new Swiper('.swiper-container', {
    centeredSlides: true,
    grabCursor: true,
 
+   effect:'slide',
+
+   effect:'fade',
+   fadeEffect:{
+      crossFade:true
+   },
+
  });

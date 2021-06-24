@@ -25,15 +25,28 @@
 .home__dog-bg {
    position: relative;
    background: url('./../../assets/images/dog.jpg') no-repeat center center /cover;
+   background: url('./../../assets/images/dog.webp') no-repeat center center /cover;
+
+   @media only screen and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 2dppx ) {
+      background: url('./../../assets/images/dog@2x.jpg') no-repeat center center /cover;
+      background: url('./../../assets/images/dog@2x.webp') no-repeat center center /cover;
+   }
+
+   @include media(max,$sm) {
+      @media ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 2dppx ) {
+         background: url('./../../assets/images/dogSm@2x.jpg') no-repeat center center /cover;
+         background: url('./../../assets/images/dogSm@2x.webp') no-repeat center center /cover;
+      }
+   }
 
    @include media(max,$sm) {
       height: 1px;
       min-height: 400px;
       margin: 0 0 30px 0;
       background: url('./../../assets/images/dogSm.jpg') no-repeat center center /cover;
+      background: url('./../../assets/images/dogSm.webp') no-repeat center center /cover;
       border-radius: $border-card-small;
    }
-
 }
 
 .home__wrapper {
@@ -96,6 +109,10 @@
    max-width: 550px;
    margin: 0 0 24px;
    color: $secondary-color-2;
+
+   @include media(max,$sm) {
+      margin: 0 0 20px;
+   }
 }
 
 .home__price {
@@ -108,7 +125,7 @@
       flex-grow: 1;
 
       @include media(max,$sm) {
-         font-size: 22px;
+         font-size: 20px;
       }
    }
 }
@@ -118,7 +135,17 @@
 }
 
 .home__btn {
-   background: linear-gradient(90deg, $secondary-color-4 0%, $secondary-color-1 100%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(90deg, $secondary-color-4 0%, $secondary-color-1 50%, $secondary-color-4 100%);
+   background-size: 200%;
+   transition: all 500ms ease;
+}
+
+.home__btn:focus,
+.home__btn:hover {
+   background-position: -100%;
 }
 
 .home__dog-btn {
@@ -128,10 +155,6 @@
 .home__dog-btn:focus,
 .home__dog-btn:hover {
    background-color: $secondary-color-1;
-}
-
-.home__btn {
-   background: linear-gradient(90deg, $secondary-color-4 0%, $secondary-color-1 100%);
 }
 
 .home__wrap-img {
@@ -148,24 +171,9 @@
       @include media(max,$sm) {
          position: absolute;
          top: auto;
-         right: -50px;
+         right: -20px;
          bottom: 0;
          left: auto;
-      }
-   }
-}
-
-.home__img {
-   @include media(max,$lg) {
-      width: 350px;
-
-      @include media(max,$sm) {
-         width: 200px;
-         min-width: 150px;
-
-         @include media(max,$xs) {
-            width: 150px;
-         }
       }
    }
 }
@@ -173,4 +181,4 @@
 .swiper-container {
    width: 100%;
    height: 100%;
- }
+}

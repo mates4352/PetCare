@@ -1,5 +1,9 @@
 .advice {
    padding: 71px 0 0;
+
+   @include media(max,$sm) {
+      padding: 51px 0 0;
+   }
 }
 
 .advice__wrapper {
@@ -26,6 +30,10 @@
    background: url('./../../assets/images/consultation.jpg') no-repeat center center /cover;
    border-radius: $border-card;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+   @media only screen and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 2dppx ) {
+      background: url('./../../assets/images/consultation@2x.jpg') no-repeat center center /cover;
+   }
 
    @include media(max,$lg) {
       width: $card-weight-lg;
@@ -66,20 +74,24 @@
    color: #fff;
 
    @include media(max,$sm) {
+      margin: 0 0 10px;
       font-size: 20px;
    }
 }
 
-.advice__arrow-btn {
+.advice__arrow {
    @include wh(230px,16px);
    z-index: 1;
    margin: 0 0 90px;
-   background-color: transparent;
-   border: none;
    transition: transform 500ms ease;
+   fill: #fff;
+
+   @include media(max,$sm) {
+      margin: 0 0 30px;
+   }
 }
 
-.advice__card:nth-of-type( 1 ):hover .advice__arrow-btn {
+.advice__card:nth-of-type( 1 ):hover .advice__arrow {
    transform: translateX(50px);
 
    @include media(max,$sm) {
@@ -87,20 +99,13 @@
    }
 }
 
-.advice__arrow {
-   @include wh(230px,16px);
-   transition: fill 500ms ease;
-   fill: #fff;
-}
-
-.advice__arrow-btn:focus .advice__arrow,
-.advice__arrow-btn:hover .advice__arrow {
-   fill: $secondary-color-4;
-}
-
 .advice__card:nth-of-type( 2 ) {
    position: relative;
    background: url('./../../assets/images/painful.jpg') no-repeat center center /cover;
+
+   @media only screen and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 2dppx ) {
+      background: url('./../../assets/images/painful@2x.jpg') no-repeat center center /cover;
+   }
 
    @include media(max,$lg) {
       margin: 0;
@@ -123,7 +128,7 @@
    color: #fff;
 
    @include media(max,$sm) {
-      margin: 0 0 53px;
+      margin: 0 0 58px;
       font-size: 14px;
    }
 }
@@ -139,6 +144,7 @@
    background-color: $base-color;
    border-bottom-right-radius: $border-card;
    border-bottom-left-radius: $border-card;
+   transition: color 500ms ease;
 
    @include media(max,$sm) {
       padding: 10px $card-padding-sm;
@@ -148,12 +154,18 @@
    }
 }
 
+.advice__link:hover {
+   color: $secondary-color-3;
+}
+
 .advice__card-bg {
    @include wh(100%);
    position: absolute;
    top: 0;
    left: 0;
    z-index: 500;
+   display: flex;
+   flex-direction: column;
    padding: 48px $card-padding;
    background-color: #fff;
    border-radius: $border-card;
@@ -170,11 +182,8 @@
    transform: translateX(0);
 }
 
-@include media(min,$lg) {
-
-   .advice__card:nth-of-type( 1 ):hover .advice__card-bg {
-      transform: translateX(0);
-   }
+.advice__card:nth-of-type( 1 ):hover .advice__card-bg {
+   transform: translateX(0);
 }
 
 .advice__title-hidden {
@@ -184,8 +193,9 @@
    color: $secondary-color-2;
 
    @include media(max,$sm) {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       font-size: 20px;
+      text-align: center;
    }
 }
 
@@ -196,13 +206,18 @@
    color: $secondary-color-4;
 
    @include media(max,$sm) {
-      margin: 0 0 16px;
+      margin: 0 0 26px;
       font-size: 26px;
+      text-align: center;
    }
 }
 
 .advice__price-hidden span {
    font-size: 32px;
+
+   @include media(max,$sm) {
+      font-size: 22px;
+   }
 }
 
 .advice__list {
@@ -221,7 +236,8 @@
    color: $base-color;
 
    @include media(max,$sm) {
-      margin: 0 0 23px;
+      margin: 0 0 25px;
+      padding: 0 0 0 40px;
       font-size: 14px;
    }
 }
@@ -230,7 +246,8 @@
    margin: 0 0 40px;
 
    @include media(max,$sm) {
-      margin: 0 0 16px;
+      max-width: 200px;
+      margin: 0 0 19px;
    }
 }
 
@@ -257,7 +274,9 @@
    transition: background-color  500ms ease;
 
    @include media(max,$sm) {
+      align-self: center;
       max-width: 220px;
+      height: 60px;
       font-size: 14px;
    }
 }

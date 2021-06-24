@@ -3,6 +3,10 @@
 
    @include media(max,$lg) {
       padding: 75px 0 50px;
+
+      @include media(max,$sm) {
+         padding: 72px 0 50px;
+      }
    }
 }
 
@@ -22,13 +26,14 @@
 
 .footer__address {
    margin: 0 194px 0 0;
+   font-style: normal;
 
    @include media(max,$lg) {
       margin: 0 50px 0 0;
 
       @include media(max,$md) {
          order: 1;
-         margin: 0 0 29px;
+         margin: 0 0 32px;
       }
    }
 }
@@ -41,6 +46,10 @@
 
 .footer__contact:nth-of-type( 1 ){
    margin: 0 0 10px;
+
+   @include media(max,$sm) {
+      margin: 0 0 5px;
+   }
 }
 
 .footer__copyright {
@@ -54,6 +63,10 @@
       @include media(max,$md) {
          order: 3;
          margin: 0;
+
+         @include media(max,$sm) {
+            font-size: 18px;
+         }
       }
    }
 }
@@ -67,5 +80,9 @@
 .footer__logo {
    @include media(max,$md) {
       margin: 0 0 35px;
+
+      @include media(max,$sm) {
+         margin: 0 0 33px;
+      }
    }
 }

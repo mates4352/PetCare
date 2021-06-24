@@ -22,7 +22,7 @@
 .swiper-button-prev,
 .swiper-button-next {
    transition: transform 500ms ease;
-   top: 51px;
+   top: 35px;
 
    @include media(max,$sm) {
       display: none;
@@ -30,13 +30,17 @@
 }
 
 .swiper-button-prev {
-   margin: 0 0 0 20px;
    left: 0;
+   @include media(max,$xl) {
+      margin: 0 0 0 20px;
+   }
 }
 
 .swiper-button-next {
-   margin: 0 20px 0 0;
    right: 0;
+   @include media(max,$xl) {
+      margin: 0 20px 0 0;
+   }
 }
 
 

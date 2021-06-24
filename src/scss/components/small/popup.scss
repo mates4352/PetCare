@@ -23,15 +23,22 @@
    width: $card-weight;
    padding: 48px $card-padding;
    background-color: #fff;
-   border-radius: 24px;
+   border-radius: $border-card;
 
    @include media(max,$lg) {
-      width: 95%;
+      width: 87%;
 
       @include media(max,$sm) {
          padding: 40px $card-padding-sm 24px;
+         border-radius: $border-card-small;
       }
    }
+}
+
+.popup__close {
+   @include wh(30px);
+   top: 10px;
+   right: 10px;
 }
 
 .popup__close.active::after,
@@ -45,7 +52,7 @@
    color: $secondary-color-2;
 
    @include media(max,$sm) {
-      margin: 0 0 24px;
+      margin: 0 0 29px;
       font-size: 16px;
    }
 }
@@ -57,7 +64,7 @@
 
 .popup__text {
    @include font(22px,1.2,400);
-   margin: 0 0 16px;
+   margin: 0 0 20px;
    color: $secondary-color-2;
 
    @include media(max,$sm) {
@@ -68,7 +75,7 @@
 
 .popup__wrap-animal {
    width: 100%;
-   margin: 0 0 41px;
+   margin: 0 0 30px;
 
    @include media(max,$sm) {
       margin: 0 0 20px;
@@ -84,14 +91,16 @@
    position: relative;
    padding: 0 0 0 40px;
    color: $secondary-color-2;
+   cursor: pointer;
 
    @include media(max,$sm) {
+      padding: 0 0 0 32px;
       font-size: 16px;
    }
 }
 
 .popup__label:nth-of-type( 1 ) {
-   margin: 0 20px 0 0;
+   margin: 0 22px 0 0;
 }
 
 .popup__label::before {
@@ -133,11 +142,13 @@
    @include font(18px,1.2,400);
    display: block;
    width: 100%;
+   padding: 10px 0;
    color: $secondary-color-2;
    border: none;
    border-bottom: 1px solid $secondary-color-2;
 
    @include media(max,$sm) {
+      padding: 2px 0;
       font-size: 14px;
    }
 }
@@ -153,7 +164,7 @@
 }
 
 .popup__input-fill:not( :last-of-type ) {
-   margin: 0 0 33px;
+   margin: 0 0 23px;
 
    @include media(max,$sm) {
       margin: 0 0 20px;
@@ -163,6 +174,12 @@
 .popup__btn {
    align-self: center;
    transition: background-color 500ms ease;
+
+   @include media(max,$sm) {
+      max-width: 240px;
+      height: 48px;
+      font-size: 20px;
+   }
 }
 
 .popup__btn:focus,
