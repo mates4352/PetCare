@@ -42,6 +42,7 @@ const config = {
       `${srcPath}/js/library/swiper.js`,
       `${srcPath}/js/components/burger.js`,
       `${srcPath}/js/components/popup.js`,
+      `${srcPath}/js/components/card.js`,
       // `${srcPath}/js/main.js`,
    ],
 
