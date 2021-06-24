@@ -1424,14 +1424,14 @@ h6 {
   margin: 0 16px;
   padding: 0 40px;
   overflow: hidden;
-  background: url("../../assets/images/consultation.jpg") no-repeat center center/cover;
+  background: url("../assets/images/consultation.jpg") no-repeat center center/cover;
   border-radius: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25)
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 2dppx) {
   .advice__card {
-    background: url("../../assets/images/consultation@2x.jpg") no-repeat center center/cover
+    background: url("../assets/images/consultation@2x.jpg") no-repeat center center/cover
   }
 }
 @media only screen and (max-width: 992px) {
