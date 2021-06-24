@@ -123,6 +123,12 @@
 
 .home__dog-btn {
    background-color: $secondary-color-2;
+   transition: background-color 500ms ease;
+}
+
+.home__dog-btn:focus,
+.home__dog-btn:hover {
+   background-color: $secondary-color-1;
 }
 
 .home__btn {

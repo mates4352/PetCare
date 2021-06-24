@@ -38,11 +38,11 @@ const config = {
    },
 
    concat: [
-      // `${srcPath}/js/main.js`,
       `${srcPath}/js/library/swiper-bundle.min.js`,
       `${srcPath}/js/library/swiper.js`,
       `${srcPath}/js/components/burger.js`,
-
+      `${srcPath}/js/components/popup.js`,
+      // `${srcPath}/js/main.js`,
    ],
 
    setEnv() {

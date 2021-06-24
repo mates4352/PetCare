@@ -3,7 +3,7 @@ const burgerMenu = () => {
    const menu = document.querySelector('.menu')
    const headerNav = document.querySelector('.header__menu')
    const headerUl = document.querySelector('.header__list')
-   const close = document.querySelector('.menu__close')
+   const close = document.querySelector('.close')
 
    function adaptivMenu(windowWidth, breakpoint) {
       if (windowWidth < breakpoint) {

@@ -8,9 +8,18 @@
    align-items: center;
    justify-content: center;
    background-color: rgba(0, 0, 0, 0.562);
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 500ms ease, visibility 500ms ease;
+}
+
+.popup.active {
+   visibility: visible;
+   opacity: 1;
 }
 
 .popup__body {
+   position: relative;
    width: $card-weight;
    padding: 48px $card-padding;
    background-color: #fff;
@@ -25,7 +34,9 @@
    }
 }
 
-.popup__close {
+.popup__close.active::after,
+.popup__close.active::before {
+   background-color: $secondary-color-2;
 }
 
 .popup__title {
@@ -40,6 +51,8 @@
 }
 
 .popup__form {
+   display: flex;
+   flex-direction: column;
 }
 
 .popup__text {
@@ -54,6 +67,7 @@
 }
 
 .popup__wrap-animal {
+   width: 100%;
    margin: 0 0 41px;
 
    @include media(max,$sm) {
@@ -147,5 +161,12 @@
 }
 
 .popup__btn {
+   align-self: center;
    background-color: $secondary-color-2;
+   transition: background-color 500ms ease;
+}
+
+.popup__btn:focus,
+.popup__btn:hover {
+   background-color: $secondary-color-1;
 }

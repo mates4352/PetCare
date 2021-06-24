@@ -1,0 +1,36 @@
+.close {
+   @include wh(24px);
+   position: absolute;
+   top: 30px;
+   right: 32px;
+   background-color: transparent;
+   border: none;
+}
+
+.close::after,
+.close::before {
+   position: absolute;
+   top: 50%;
+   left: 0;
+
+   @include wh(100%,2px);
+   background-color: $secondary-color-3;
+   transition: transform 700ms linear;
+   content: '';
+}
+
+.close::after {
+   transform: rotate(45deg) scale(0);
+}
+
+.close::before {
+   transform: rotate(-45deg) scale(0);
+}
+
+.close.active::after {
+   transform: rotate(45deg) scale(1);
+}
+
+.close.active::before {
+   transform: rotate(-45deg) scale(1);
+}
