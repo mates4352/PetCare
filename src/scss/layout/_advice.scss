@@ -27,12 +27,12 @@
    margin: 0 16px;
    padding: 0 $card-padding;
    overflow: hidden;
-   background: url('./../../assets/images/consultation.jpg') no-repeat center center /cover;
+   background: url('../assets/images/consultation.jpg') no-repeat center center /cover;
    border-radius: $border-card;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
    @media only screen and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 2dppx ) {
-      background: url('./../../assets/images/consultation@2x.jpg') no-repeat center center /cover;
+      background: url('../assets/images/consultation@2x.jpg') no-repeat center center /cover;
    }
 
    @include media(max,$lg) {
