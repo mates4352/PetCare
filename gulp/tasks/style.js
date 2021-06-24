@@ -30,8 +30,7 @@ const style = () => (
          [
             mqpacker(),
             autoprefixer([
-               '> 0.1%',
-               'IE 11',
+               '> 10%'
             ]),
             pxtorem({
                propList: ['*'],

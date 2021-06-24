@@ -8,8 +8,9 @@ const purgecss = () => (
             content: [
                'src/**/*.html',
                'src/js/**/*.js',
-            ]
+            ],
          }
+         // /advice-.*/,
       ))
       .pipe(gulp.dest('./dist/css'))
 )
